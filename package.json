@@ -1,0 +1,21 @@
+{
+  "name": "cripto-data",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "keywords": [
+    "CRIPTO",
+    "DATA"
+  ],
+  "author": "Francisco N Bogarin",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^7.3.0"
+  },
+  "dependencies": {
+    "exceljs": "^4.2.1"
+  }
+}

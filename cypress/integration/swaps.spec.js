@@ -20,25 +20,24 @@ dejo ejemplos abajo con algunos tokens.
 const DATA = { data: [] }
 
 describe('Go to pancakeSwap', () => {
-
     let tokens = [
         {
-            name: 'Chive',
+            name: 'Neko',
             contract: '0x22f020a4cbe06a965fce624f62232fdab6c7e627',
-            quantity: 0,
-            base: 0
+            quantity: 2190366207,
+            base: 60
         },
         {
-            name: 'Bunny',
-            contract: '0xc9849e6fdb743d08faee3e34dd2d1bc69ea11a51',
-            quantity: 100,
-            base: 0
+            name: 'Wex',
+            contract: '0xa9c41A46a6B3531d28d5c32F6633dd2fF05dFB90',
+            quantity: 3460,
+            base: 100
         },
         {
-            name: 'Bunny2',
-            contract: '0xc9849e6fdb743d08faee3e34dd2d1bc69ea11a51',
-            quantity: 0,
-            base: 0
+            name: 'Predator',
+            contract: '0x2BC3b2d426c3cEC0914912F97524722b401f1D84',
+            quantity: 300,
+            base: 415
         }
     ]
     tokens.forEach(async (token) => {
@@ -56,29 +55,29 @@ describe('Go to pancakeSwap', () => {
 describe('Go to Quickswap', () => {
     let polygonTokens = [
         {
-            name: 'Krill',
-            contract: '0x05089C9EBFFa4F0AcA269e32056b1b36B37ED71b',
-            quantity: 0,
-            base: 0
-        },
-        {
             name: 'PolyDoge',
             contract: '0x8A953CfE442c5E8855cc6c61b1293FA648BAE472',
-            quantity: 0,
-            base: 0
+            quantity: 3545328175,
+            base: 46
         },
         {
             name: 'Polymoon',
             contract: '0xeFb3009DdAc87E8144803d78E235E7fb4cd36e61',
-            quantity: 0,
+            quantity: 25653,
             base: 0
         },
         {
             name: 'Lion',
             contract: '0x1DA554D34027ca8dE74C5b1cd2FA53A8a1492C94',
-            quantity: 0,
+            quantity: 328,
+            base: 28
+        }, {
+            name: 'Kogecoin',
+            contract: '0x13748d548D95D78a3c83fe3F32604B4796CFfa23',
+            quantity: 1164,
             base: 0
         }
+
     ]
     polygonTokens.forEach(async (token) => {
         await it(`Get ${token.name} value`, async () => {
@@ -101,6 +100,24 @@ describe('Go to Heco Swap', () => {
             contract: '0xC38072AA3F8E049De541223A9c9772132bB48634',
             quantity: 8416062,
             base: 139
+        },
+        {
+            name: 'NUT',
+            contract: '0x4f0A338DFa1C9369F62109C9022042e1F0aE479b',
+            quantity: 231,
+            base: 30
+        },
+        {
+            name: 'MSP',
+            contract: '0x3587b2f70d5eaaa26a7b6520b9f286b6538d621f',
+            quantity: 2014869095,
+            base: 0
+        },
+        {
+            name: 'PGO',
+            contract: '0xcecc272583c4ea6167f832cf14e9522c605dd631',
+            quantity: 6726,
+            base: 53
         }
     ]
     hecoTokens.forEach(async (token) => {
@@ -120,13 +137,13 @@ describe('Go to Heco Swap', () => {
 function getBuyValueFromPancake(contract, name, quantity, base) {
     return new Promise((resolve, reject) => {
         cy.visit(`https://exchange.pancakeswap.finance/#/swap?inputCurrency=${contract}&outputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56`)
-        cy.wait(1000)
+        cy.wait(2000)
         if (cy.get('reach-portal')) {
-            cy.wait(1500)
-            cy.get('#understand-checkbox').click()
-            cy.wait(1500)
-            cy.get('.token-dismiss-button').click()
-            cy.wait(1500)
+            cy.wait(500)
+            cy.get('input[name="confirmed"').click()
+            cy.wait(500)
+            cy.get('button').contains('Import').click()
+            cy.wait(500)
         }
         // cy.get('#swap-currency-output').find('#pair').click()
         // cy.wait(1500)

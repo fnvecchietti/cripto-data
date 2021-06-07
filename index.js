@@ -1,4 +1,5 @@
 const so = require('fs')
+var colors = require('colors');
 const cypress = require('cypress')
 
 async function run() {
@@ -15,7 +16,9 @@ async function run() {
 }
 
 run().then(res => {
-    console.log(res);
+    res.data.forEach(coin => {
+        coin.status > 0 ? console.log(colors.green(coin)) : console.log(colors.red(coin))
+    })
 })
 
 

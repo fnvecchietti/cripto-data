@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cripto Data</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
+        <div class="coinmarketcap-currency-widget" data-currencyid="1" data-base="USD" data-secondary=""
+            data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-statsticker="true"
+            data-stats="USD"></div>
+    </header>
+    <script>
+        console.log('Reloading activo cada 3.33 minutos');
+        setInterval(() => {
+            window.location.reload()
+        }, 200000)
+    </script>
+    <ul class="list-group">
+        <% for(var coin of data) {%>
+            <li class="list-group-item">
+                <h1>
+                    Token name:
+                    <span class="badge badge-pill badge-dark">
+                        <%=coin.name%>
+                    </span>
+                    Amount of Token in USD:
+                    <span class="badge badge-pill badge-info">
+                        <%=coin.value%>
+                    </span>
+                    Profit/lose
+                    <%if (coin.status> 0) { %>
+                        <span class="badge badge-pill badge-success">
+                            <%=coin.status%>
+                        </span>
+                        <% } %>
+                            <%if (coin.status < 0) { %>
+                                <span class="badge badge-pill badge-danger">
+                                    <%=coin.status%>
+                                </span>
+                                <% } %>
+                </h1>
+            </li>
+            <% } %>
+    </ul>
+</body>
+
+</html>

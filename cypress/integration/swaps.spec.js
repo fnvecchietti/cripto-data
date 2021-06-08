@@ -22,22 +22,10 @@ const DATA = { data: [] }
 describe('Go to pancakeSwap', () => {
     let tokens = [
         {
-            name: 'Neko',
-            contract: '0x22f020a4cbe06a965fce624f62232fdab6c7e627',
-            quantity: 2190366207,
-            base: 60
-        },
-        {
-            name: 'Wex',
-            contract: '0xa9c41A46a6B3531d28d5c32F6633dd2fF05dFB90',
-            quantity: 3460,
-            base: 100
-        },
-        {
-            name: 'Predator',
-            contract: '0x2BC3b2d426c3cEC0914912F97524722b401f1D84',
-            quantity: 300,
-            base: 415
+            name: 'Banana',
+            contract: '0x603c7f932ed1fc6575303d8fb018fdcbb0f39a95',
+            quantity: 62.66,
+            base: 136
         }
     ]
     tokens.forEach(async (token) => {
@@ -59,25 +47,7 @@ describe('Go to Quickswap', () => {
             contract: '0x8A953CfE442c5E8855cc6c61b1293FA648BAE472',
             quantity: 3545328175,
             base: 46
-        },
-        {
-            name: 'Polymoon',
-            contract: '0xeFb3009DdAc87E8144803d78E235E7fb4cd36e61',
-            quantity: 25653,
-            base: 0
-        },
-        {
-            name: 'Lion',
-            contract: '0x1DA554D34027ca8dE74C5b1cd2FA53A8a1492C94',
-            quantity: 328,
-            base: 28
-        }, {
-            name: 'Kogecoin',
-            contract: '0x13748d548D95D78a3c83fe3F32604B4796CFfa23',
-            quantity: 1164,
-            base: 0
         }
-
     ]
     polygonTokens.forEach(async (token) => {
         await it(`Get ${token.name} value`, async () => {
@@ -100,24 +70,6 @@ describe('Go to Heco Swap', () => {
             contract: '0xC38072AA3F8E049De541223A9c9772132bB48634',
             quantity: 8416062,
             base: 139
-        },
-        {
-            name: 'NUT',
-            contract: '0x4f0A338DFa1C9369F62109C9022042e1F0aE479b',
-            quantity: 231,
-            base: 30
-        },
-        {
-            name: 'MSP',
-            contract: '0x3587b2f70d5eaaa26a7b6520b9f286b6538d621f',
-            quantity: 2014869095,
-            base: 0
-        },
-        {
-            name: 'PGO',
-            contract: '0xcecc272583c4ea6167f832cf14e9522c605dd631',
-            quantity: 6726,
-            base: 53
         }
     ]
     hecoTokens.forEach(async (token) => {

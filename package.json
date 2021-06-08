@@ -4,7 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cypress open"
+    "test": "cypress open",
+    "dev": "nodemon index.js"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "*.json",
+      "cypress"
+    ]
   },
   "keywords": [
     "CRIPTO",
@@ -17,6 +24,9 @@
   },
   "dependencies": {
     "colors": "^1.4.0",
-    "exceljs": "^4.2.1"
+    "ejs": "^3.1.6",
+    "exceljs": "^4.2.1",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
   }
 }

@@ -26,34 +26,9 @@
             window.location.reload()
         }, 10000)
     </script>
-    <ul class="list-group">
-        <% for(var coin of data) {%>
-            <li class="list-group-item">
-                <h1>
-                    Token name:
-                    <span class="badge badge-pill badge-dark">
-                        <%=coin.name%>
-                    </span>
-                    Amount of Token in USD:
-                    <span class="badge badge-pill badge-info">
-                        <%=coin.value%>
-                    </span>
-                    Profit/lose
-                    <%if (coin.status> 0) { %>
-                        <span class="badge badge-pill badge-success">
-                            <%=coin.status%>
-                        </span>
-                        <% } %>
-                            <%if (coin.status < 0) { %>
-                                <span class="badge badge-pill badge-danger">
-                                    <%=coin.status%>
-                                </span>
-                                <% } %>
-                </h1>
-            </li>
-            <% } %>
-
-    </ul>
+    <div>
+        CriptoCurrencyIsFuckingloading
+    </div>
 </body>
 
 </html>

@@ -5,28 +5,38 @@ const so = require('fs')
 var colors = require('colors');
 const cypress = require('cypress')
 
+let isRunning
+
 async function run() {
+    isRunning = true
     await cypress.run({
         browser: 'chrome',
         config: {
             video: false
         },
         headless: true
+    }).then(() => {
+        isRunning = false
     })
-    let rawdata = await so.readFileSync('./data.json')
-    let data = await JSON.parse(rawdata)
-    return data
 }
 
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 
 app.get('/', async (req, res) => {
-    run().then(data => {
+    if (!isRunning) {
+        let rawdata = await so.readFileSync('./data.json')
+        let data = await JSON.parse(rawdata)
         res.render('index', data)
-    })
+    } else {
+        res.render('shitloading')
+    }
+
 })
 
 app.listen(3000, () => {
     console.log('server running on: ', 3000);
 })
+setInterval(() => {
+    run()
+}, 180000)

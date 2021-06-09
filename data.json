@@ -1,64 +1,19 @@
 {
   "data": [
     {
-      "name": "PolyDoge",
-      "value": "81.1294",
-      "status": 35.129400000000004
-    },
-    {
-      "name": "Polymoon",
-      "value": "0.000136",
-      "status": 0.000136
-    },
-    {
-      "name": "Lion",
-      "value": "0.970427",
-      "status": -27.029573
-    },
-    {
-      "name": "Kogecoin",
-      "value": "43.2255",
-      "status": 43.2255
-    },
-    {
       "name": "Banana",
-      "value": "139.968",
-      "status": 3.9679999999999893
+      "value": "133.973",
+      "status": -2.026999999999987
     },
     {
-      "name": "Neko",
-      "value": "0.0496908",
-      "status": -59.9503092
+      "name": "SafeMoon",
+      "value": "48.0485",
+      "status": -1.951500000000003
     },
     {
       "name": "Wex",
-      "value": "148.5",
-      "status": 48.5
-    },
-    {
-      "name": "Predator",
-      "value": "13.5207",
-      "status": -20.479300000000002
-    },
-    {
-      "name": "SHIB",
-      "value": "65.130853",
-      "status": -73.869147
-    },
-    {
-      "name": "NUT",
-      "value": "59.110227",
-      "status": 29.110227000000002
-    },
-    {
-      "name": "MSP",
-      "value": "4.417732",
-      "status": 4.417732
-    },
-    {
-      "name": "PGO",
-      "value": "32.820591",
-      "status": -20.179409
+      "value": "150.981",
+      "status": 50.980999999999995
     }
   ]
 }
